@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('credits', function (Blueprint $table) {
             $table->id();
+            $table->integer('monto');
+            $table->string('tipo_pago');
+            $table->integer('plazo');
+            $table->string('cliente_id');
+            $table->foreignId('cliente_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
