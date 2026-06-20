@@ -16,8 +16,7 @@ return new class extends Migration
             $table->integer('monto');
             $table->string('tipo_pago');
             $table->integer('plazo');
-            $table->string('cliente_id');
-            $table->foreignId('cliente_id')->constrained()->onDelete('cascade');
+            $table->foreignId('clients_id')->constrained('clients')->onDelete('cascade');
             $table->timestamps();
         });
     }

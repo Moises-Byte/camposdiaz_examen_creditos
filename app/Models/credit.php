@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class credit extends Model
 {
     use HasFactory;
-    protected $fillable = ['monto', 'tipo_pago', 'plazo', 'cliente_id'];
+    protected $fillable = ['monto', 'tipo_pago', 'plazo', 'clients_id'];
 
     public function clients()
     {
-        return $this->belongsTo(clients::class);
+        return $this->belongsTo(clients::class,'clients_id');
     }
 }

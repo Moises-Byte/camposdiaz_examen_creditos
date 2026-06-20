@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends Factory<credit>
  */
-class CreditoFactory extends Factory
+class creditFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class CreditoFactory extends Factory
             'monto' => fake()->numberBetween(100, 2000),
             'tipo_pago' => fake()->randomElement(['diario', 'semanal', 'mensual']),
             'plazo' => fake()->numberBetween(5, 20),
-            'cliente_id' => clients::factory(),
+            'clients_id' => clients::factory(),
         ];
     }
 }
